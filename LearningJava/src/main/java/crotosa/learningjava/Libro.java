@@ -9,8 +9,8 @@ package crotosa.learningjava;
 public class Libro {
     
     String titulo;
-    int cantidad_paginas;
-    String autor;
+    private int cantidad_paginas;
+    protected String autor;
     String editorial;
     void abrir() {}
     void leer() {}
@@ -35,5 +35,11 @@ public class Libro {
     }
     public Libro(int paginas){
         cantidad_paginas = paginas;
-}
+    }
+    public int getCantidad_paginas (){
+        return cantidad_paginas;
+    }
+    public void setCantidad_paginas(int cp){
+        cantidad_paginas = cp;
+    }
 }
